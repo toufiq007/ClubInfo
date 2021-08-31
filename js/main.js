@@ -50,21 +50,23 @@ let showModal = (club)=>{
 
 let showClubInfo = (clubs)=>{
   let clubInfo = document.getElementById("sportsCentre");
-  clubInfo.innerHTML = `
+  let div = document.createElement("div")
+  div.classList.add("card-sec");
+  clubInfo.textContent = ''
+  div.innerHTML = `
       
-
-      <div class=" col-md-4 bg-info" style="cursor:pointer">
+      <div>
         <img class="card-img-top img-fluid w-75" src="${clubs.strTeamBadge}" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">League: ${clubs.strSport}</h5>
           <h5>Club Name:  ${clubs.strTeam}</h5>
-          <h5>Team short: ${clubs.strTeamShort}</h5>
           <h5>league: ${clubs.strLeague}</h5>
           <h5>Stadium: ${clubs.strStadium}</h5>
-          <button type="button" id="btn" class="btn btn-primary" onclick="showModal()" data-bs-toggle="modal" data-bs-target="#exampleModal">Show Info</button>
+          <button type="button" id="btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Show Info</button>
         </div>
       </div>
   `
+  clubInfo.appendChild(div)
   // showModal(clubs)
 }
 

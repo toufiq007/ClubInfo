@@ -1,0 +1,11 @@
+.card-sec
+{
+  border: 5px solid black;
+  background: lightblue;
+  border-radius: 10px;
+  width: 40%;
+  margin: auto;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px 0;
+}
