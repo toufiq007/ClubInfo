@@ -58,15 +58,17 @@ let showClubInfo = (clubs)=>{
       <div>
         <img class="card-img-top img-fluid w-75" src="${clubs.strTeamBadge}" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">League: ${clubs.strSport}</h5>
+          <h5 class="card-title">Sports: ${clubs.strSport}</h5>
           <h5>Club Name:  ${clubs.strTeam}</h5>
           <h5>league: ${clubs.strLeague}</h5>
+          <h5>Country: ${clubs.strCountry}</h5>
           <h5>Stadium: ${clubs.strStadium}</h5>
+          <h5>Website: <a href="http://${clubs.strWebsite}" target="./blank">Official Website</a></h5>
           <button type="button" id="btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Show Info</button>
         </div>
       </div>
   `
+  console.log(clubs.strWebsite)
   clubInfo.appendChild(div)
-  // showModal(clubs)
 }
 
